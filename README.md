@@ -1,50 +1,55 @@
-# Welcome to your Expo app 👋
+# Overview
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+The Movie DB is a mobile application that lets you search for movies and rate them. Your ratings are stored locally, so you can revisit and update them anytime. Simply use the search bar to find a movie by its exact name, then scroll down to provide your rating.
 
-## Get started
+## Features
 
-1. Install dependencies
+- Search Movies: Quickly find any movie by its name.
+- Rate Movies: Assign ratings to movies and have them saved for future reference.
+- Update Ratings: Easily change your ratings whenever you want.
 
-   ```bash
-   npm install
-   ```
+## Purpose
 
-2. Start the app
+This app was developed as a learning project to deepen my understanding of app development with React Native. My goal was to create an application with rich user interactions, inspired by various web apps. Through this project, I aimed to:
 
-   ```bash
-    npx expo start
-   ```
+- Gain hands-on experience in building mobile applications.
+- Learn how to fetch data from the web.
+- Understand how to store data locally on a device.
 
-In the output, you'll find options to open the app in a
+{Provide a link to your YouTube demonstration. It should be a 4-5 minute demo of the app running and a walkthrough of the code.}
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+[Software Demo Video](https://youtu.be/s-37yeBrNxk)
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+# Development Environment
 
-## Get a fresh project
+This app is build with react native and expo. To start the app run `npx expo start --tunnel` at the root of the project. After that command is run expo will list out several options on where to open the app. More information on environment setup can be found on [React's website](https://reactnative.dev/docs/environment-setup).
 
-When you're ready, run:
+This app requires an api key for [OMDb](https://www.omdbapi.com/apikey.aspx). The key should be stored in `ombdbApiKey.ts` at the root of the project. The `ombdbApiKey.ts` file should contain the following:
 
-```bash
-npm run reset-project
+```ts
+export const ombdApiKey = "yourKey";
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Libraries
 
-## Learn more
+- React
+- React Native
+- Expo
+- React Native Storage
 
-To learn more about developing your project with Expo, look at the following resources:
+# Useful Websites
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+{Make a list of websites that you found helpful in this project}
 
-## Join the community
+- [React Native](https://reactnative.dev/)
+- [Expo Go](https://docs.expo.dev/)
+- [React Native Storage](https://github.com/sunnylqm/react-native-storage)
 
-Join our community of developers creating universal apps.
+# Future Work
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+{Make a list of things that you need to fix, improve, and add in the future.}
+
+- Add more data to from the search results (critic ratings, plot summary, etc)
+- Make the inputs easier to see
+- auto load the api key through the env
+- Force the ratings input to only allows rating of 1-5
